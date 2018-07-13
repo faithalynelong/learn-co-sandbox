@@ -1,4 +1,4 @@
-let winArr1 = [
+let winArr = [
   ["#0-0", "#1-0", "#2-0"],
   // top row
 //continue untill all rows are filled
@@ -28,13 +28,35 @@ function markCell(){
   }
 }
 
+function elementContains(id, mark) {
+  return $(id).text() ===mark
+}
 // this function runs after each turn
 // it checks whether a given (either 'x' or 'o') populates all
 // three spots in any given win combination
-function playerWon () {
-  for (let i = ; i < ; i) {
-    let winCombo = 
-    let won = w
+function playerWon (mark) {
+  for (let i = 0; i < winArr; i ++) {
+    let winCombo = winArr[i];
+    let won = winCombo.every(id => elementContains(id, mark));
     // checks if elementContains returns true for every id
-    if (won) return;
-	
+    if (won) return true;
+  }
+  
+  return false
+}
+
+function resetGame(){
+  
+}
+  
+  function listForClickOnMessage(){
+  }
+  }
+  
+  
+  
+}
+}
+  
+  
+  
