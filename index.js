@@ -15,21 +15,22 @@ let mark='X';
 	
 //create an event listener that works as a function for when players are marking
 	function listenForClicksOnCell() {
-  return $('.cell').click(markCell) === mark
+  return $('.cell').click(markCell) === mark;
 }
-listenForClicksOnCells()
+listenForClicksOnCells();
 
 function markCell(){
   if (!this.innerText) {
-    this.innerText = mark
+    this.innerText = mark;
     if (playerWon(mark)) {
-      console.log(mark,'You won the game!')
+      console.log(mark,'You won the game!');
     }
+    mark = (mark==='X')?'O': 'X';
   }
 }
 
 function elementContains(id, mark) {
-  return $(id).text() ===mark
+  return $(id).text() ===mark;
 }
 // this function runs after each turn
 // it checks whether a given (either 'x' or 'o') populates all
