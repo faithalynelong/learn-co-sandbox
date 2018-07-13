@@ -26,5 +26,5 @@ function playerWon () {
     let winCombo = 
     let won = w
     // checks if elementContains returns true for every id
-    if (won) return 
+    if (won) return;
 	
