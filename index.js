@@ -22,8 +22,8 @@ listenForClicksOnCells();
 function markCell(){
   if (!this.innerText) {
     this.innerText = mark;
-    if (playerWon(mark)) {
-      alert()mark,'You won the game!');
+    if (playerWon(mark)); {
+      alert('You won the game!');
     }
     mark = (mark==='X')?'O': 'X';
   }
