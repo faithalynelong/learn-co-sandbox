@@ -23,7 +23,7 @@ function markCell(){
   if (!this.innerText) {
     this.innerText = mark;
     if (playerWon(mark)) {
-      console.log(mark,'You won the game!');
+      alert()mark,'You won the game!');
     }
     mark = (mark==='X')?'O': 'X';
   }
